@@ -23,7 +23,7 @@ Route::middleware(['auth.custom'])->group(function () {
     })->name('dashboard');
 Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
 Route::delete('/destroy/{id}', [AuthController::class, 'destroy'])->name('users.destroy');
-Route::get('/edit/{id}', [AuthController::class, 'update'])->name('users.edit');
+Route::put('/edit/{id}', [AuthController::class, 'update'])->name('users.edit');
 
 });
 

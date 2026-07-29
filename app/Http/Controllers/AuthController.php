@@ -74,7 +74,6 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required | string | max:255',
             'email' => 'required | email|unique:users,email,'.$user->id,
-            'password' => 'required | string | min:6',
             'address' => 'required | string | max:255',
             'phone' => 'required | string | max:255',
             'situation_matrimoniale' => 'required | string | max:255',
@@ -89,14 +88,13 @@ class AuthController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = Hash::make($request->password);
-        $user->adress = $request->address;
+        $user->address = $request->address;
         $user->phone = $request->phone;
         $user->situation_matrimoniale = $request->situation_matrimoniale;
         $user->date_naissance = $request->date_naissance;
         $user->save();
 
-        return redirect('dashnoard')->with('sucess','utilisateur mis à jour avec succes');
+        return redirect('dashboard')->with('sucess','utilisateur mis à jour avec succes');
 
 
 

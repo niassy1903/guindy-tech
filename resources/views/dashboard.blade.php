@@ -325,6 +325,32 @@
 
                                             </div>
 
+                                            <div class="mb-3">
+
+                                                <label class="form-label">
+                                                    Situation Matrimoniale
+                                                </label>
+
+                                                <input
+                                                        class="form-control"
+                                                        name="situation_matrimoniale"
+                                                        value="{{$user->situation_matrimoniale}}">
+
+                                            </div>
+
+                                            <div class="mb-3">
+
+                                                <label class="form-label">
+                                                    Date de Naissance
+                                                </label>
+
+                                                <input
+                                                        class="form-control"
+                                                        name="date_naissance"
+                                                        value="{{$user->date_naissance}}">
+
+                                            </div>
+
 
 
                                         </div>
