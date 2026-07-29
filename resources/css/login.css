@@ -1,0 +1,29 @@
+body{
+    background: linear-gradient(135deg,#4f46e5,#3b82f6,#06b6d4);
+}
+
+.card{
+    backdrop-filter: blur(15px);
+    animation: fade .6s ease-in-out;
+}
+
+.form-control{
+    border-radius:12px;
+    padding:12px;
+}
+
+.btn{
+    border-radius:12px;
+    font-weight:bold;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
